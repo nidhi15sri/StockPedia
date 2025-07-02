@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Enter Stock Details</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="form-container">
+    <h2>Enter Stock Details</h2>
+    <form id="stockForm">
+      <input type="text" placeholder="Stock Name" required id="stock">
+      <input type="number" placeholder="P/E Ratio" required>
+      <input type="number" placeholder="P/B Ratio" required>
+      <input type="number" placeholder="EPS" required>
+      <input type="number" placeholder="Market Cap (in Cr)" required>
+      <input type="number" placeholder="Debt to Equity" required>
+      <input type="number" placeholder="ROE (%)" required>
+      <input type="number" placeholder="ROCE (%)" required>
+      <input type="number" placeholder="Dividend Yield (%)" required>
+      <input type="number" placeholder="Price to Sales" required>
+      <input type="number" placeholder="Current Ratio" required>
+      <button type="submit">Analyze</button>
+    </form>
+  </div>
+  <script>
+    document.getElementById("stockForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      localStorage.setItem("stockName", document.getElementById("stock").value);
+      window.location.href = "loading.html";
+    });
+  </script>
+</body>
+</html>

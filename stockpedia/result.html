@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Result - Stockpedia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="result-container">
+    <h2>Prediction Result 📊</h2>
+    <p><strong>Stock:</strong> <span id="stockName"></span></p>
+    <div class="card">
+      <h3>📈 Investment Advice</h3>
+      <p>This stock looks promising based on the given ratios. Medium to long-term holding is recommended.</p>
+    </div>
+    <div class="card">
+      <h3>⚠️ Risk Analysis</h3>
+      <p>Moderate risk due to market volatility. Diversify portfolio.</p>
+    </div>
+    <div class="card">
+      <h3>✅ Final Verdict</h3>
+      <p><strong>Buy</strong> — for long-term investors.</p>
+    </div>
+    <button onclick="location.href='index.html'">Back to Home</button>
+  </div>
+
+  <script>
+    document.getElementById("stockName").innerText = localStorage.getItem("stockName");
+  </script>
+</body>
+</html>
